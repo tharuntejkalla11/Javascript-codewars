@@ -1,0 +1,55 @@
+
+https://www.codewars.com/kata/54129112fb7c188740000162
+
+function prefill(n, v) {
+  if(n < 0 || isNaN(n) || typeof(n) == 'boolean'|| !isFinite(n) || n%1!==0){
+    throw new TypeError(n+' is invalid');
+  }else{
+   var arr = new Array(Number(n));
+  return arr.fill(v);
+  }
+  return ;
+}
+
+https://www.codewars.com/kata/526ec46d6f5e255e150002d1
+
+function createFunctions(n) {
+  var callbacks = [];
+  
+  var lol = function(i){
+    return function(){
+      return i;
+    }
+  }
+  for (var i=0; i<n; i++) {
+    callbacks.push(lol(i));
+  }
+  
+  return callbacks;
+}
+
+https://www.codewars.com/kata/5351b35ebaeb67f9110012d2
+
+function createSecretHolder(secret) {
+  return{
+    setSecret: function(s){
+      secret = s;
+    },
+    getSecret: function(){
+      return secret;
+  }
+  };
+}
+
+https://www.codewars.com/kata/5351b35ebaeb67f9110012d2
+
+function createSecretHolder(secret) {
+  return{
+    setSecret: function(s){
+      secret = s;
+    },
+    getSecret: function(){
+      return secret;
+  }
+  };
+}

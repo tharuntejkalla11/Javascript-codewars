@@ -1,0 +1,31 @@
+
+https://www.codewars.com/kata/56e2f59fb2ed128081001328
+function printArray(array){
+  return array.join(",");
+}
+
+
+http://www.codewars.com/kata/opposite-number
+function opposite(number) {
+   return -1*number;
+}
+
+https://www.codewars.com/kata/56dec885c54a926dcd001095
+function basicOp(operation, value1, value2)
+{
+  return eval(value1+operation+value2);
+}
+
+https://www.codewars.com/kata/568d0dd208ee69389d000016
+
+function rentalCarCost(days) {
+  var total=40*days;
+  if(days>=7){
+    return total-50;
+  }
+  else if(days>=3)
+  {
+    return total-20;
+  }
+  return total
+}
