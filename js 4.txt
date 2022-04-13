@@ -1,0 +1,64 @@
+https://www.codewars.com/kata/53583765d5493bfdf5001b35/train/javascript
+
+var Cat = (function () {
+    const catsarr = []
+  
+    const constructor = function (name, weight) {
+      if (!name || !weight) throw Error('invalid parameters')
+      Object.defineProperty(this, 'name', { get: () => name })
+      Object.defineProperty(this, 'weight', { get: () => weight, set: value => weight = value })
+      catsarr.push(this)
+    }
+  
+    constructor.averageWeight =() => catsarr.reduce((acc, cat) => (acc + cat.weight), 0) / catsarr.length
+  
+    return constructor
+  }())
+
+https://www.codewars.com/kata/a-chain-adding-function
+
+function add(n){
+    var s= function(x){
+      return add(n+x);
+    };
+    s.valueOf=function(){
+  return n;
+    };
+    return s;
+  }
+
+https://www.codewars.com/kata/function-cache
+
+
+function cache(func) {
+    var arr={};
+    return function(){
+      var k = JSON.stringify(arguments);
+      if(!(k in arr)){
+        arr[k] = func.apply(null, arguments);
+      }
+      return arr[k];
+    };
+}
+
+https://www.codewars.com/kata/5421c6a2dda52688f6000af8/javascript
+
+function compose(f,g) {
+  return function(...a) {
+    return f(g(...a));
+  }
+}
+
+https://www.codewars.com/kata/function-composition-1
+
+function compose() {
+  var m=arguments.length
+  var arr=[];
+    for (var i=0; i<m; i++)
+      arr.push(arguments[m-1-i]);
+  return function (n){
+  for (var i=0; i<m; i++)
+    n=arr[i](n);
+  return n
+  }
+}
